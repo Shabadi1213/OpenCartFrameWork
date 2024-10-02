@@ -26,6 +26,7 @@ public class AccountsPage {
 	public String getAccountsPageTitle() {
 		String title = eleUtil.getTitle(AppConstants.ACCOUNTS_PAGE_TITLE, AppConstants.WAIT_FOR_SHORT_DURATION);
 		System.out.println(title);
+	
 		return title;
 	}
 
