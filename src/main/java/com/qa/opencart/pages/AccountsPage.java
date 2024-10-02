@@ -47,4 +47,7 @@ public class AccountsPage {
 		eleUtil.doClick(searchBtn);
 		return new ResultsPage(driver);
 	}
+	
+	
+
 }
