@@ -45,7 +45,7 @@
 		</classes>
 	</test>
 	
-	 <test name="ProductInfoPage Test">
+	<test name="ProductInfoPage Test">
 	 	<parameter name="browser" value="firefox" />
 	 	<parameter name="browserversion" value="105.0" />
 	 	<parameter name="testname" value="ProductInfoPage Test" />
