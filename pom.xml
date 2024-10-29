@@ -119,7 +119,7 @@
 					<suiteXmlFiles>
 							<!--src/test/resources/testrunners/testng_opencart.xml</suiteXmlFile>-->
 							<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-                      </suiteXmlFiles>  
+                     </suiteXmlFiles>  
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
