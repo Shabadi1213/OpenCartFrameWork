@@ -54,14 +54,14 @@
 		</classes>
 	</test>
 	
- 	<!--<test name="RegistrationPage Test">
+ 	<test name="RegistrationPage Test">
 		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="124.0" />
 		<parameter name="testname" value="RegistrationPage Test" />
 		<classes>
 			<class name="com.qa.opencart.tests.RegisterationFormPageTest" />
 		</classes>
-		</test>-->
+		</test>
 
 	
 </suite>
