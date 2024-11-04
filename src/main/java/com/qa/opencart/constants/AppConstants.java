@@ -20,7 +20,7 @@ public class AppConstants {
 	public static final int IMAC_SEARCH_COUNT = 1;
 	public static final int SAMSUNG_SEARCH_COUNT = 2;
 	public static final int MACBOOK_PRODUCT_IMAGES_COUNT = 4;
-	
+	public static final String LOGIN_ERROR = "Warning: No match for E-Mail Address and/or Password.";
 
 	public static final List<String> HEADER_LIST = List.of("My Account","My Orders","My Affiliate Account","Newsletter");
 	

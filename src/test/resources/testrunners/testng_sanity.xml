@@ -11,13 +11,24 @@
 	
 
 
-	<test name="Login Test">
+<!--	<test name="Login Test">
 		<parameter name="browser" value="chrome" />
 	    <parameter name="browserversion" value="126.0" />
 	    <parameter name="testname" value="Login Test" />
 	
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
+		</classes>
+	</test>-->
+	
+	
+	<test name="InvalidLogin Test">
+		<parameter name="browser" value="chrome" />
+	    <parameter name="browserversion" value="126.0" />
+	    <parameter name="testname" value="InvalidLogin Test" />
+	
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageNegativeTest" />
 		</classes>
 	</test>
 	
