@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import com.qa.opencart.logger.Log;
+
 public class OptionsManager {
 	
 	Properties prop;
@@ -23,11 +25,13 @@ public class OptionsManager {
 		co = new ChromeOptions();
 
 		if (Boolean.parseBoolean(prop.getProperty("headless"))) {
-			System.out.println("====Running in Headless ==== ");
+//			System.out.println("====Running in Headless ==== ");
+			Log.info("====Running in Headless ==== ");
 			co.addArguments("--headless");
 		}
 		if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
-			System.out.println("====Running in incognito mode==== ");
+//			System.out.println("====Running in incognito mode==== ");
+			Log.info("====Running in incognito mode==== ");
 			co.addArguments("--incognito");
 		}
         
@@ -48,11 +52,13 @@ public class OptionsManager {
 	public FirefoxOptions getFirefoxOptions() {
 		fo = new FirefoxOptions();
 		if (Boolean.parseBoolean(prop.getProperty("headless"))) {
-			System.out.println("====Running in Headless==== ");
+//			System.out.println("====Running in Headless==== ");
+			Log.info("====Running in Headless ==== ");
 			fo.addArguments("--headless");
 		}
 		if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
-			System.out.println("====Running in incognito mode===== ");
+//			System.out.println("====Running in incognito mode===== ");
+			Log.info("====Running in incognito mode==== ");
 			fo.addArguments("--incognito");
 		}
 		
@@ -73,11 +79,13 @@ public class OptionsManager {
 	public EdgeOptions getEdgeOptions() {
 		eo = new EdgeOptions();
 		if (Boolean.parseBoolean(prop.getProperty("headless"))) {
-			System.out.println("====Running in Headless==== ");
+//			System.out.println("====Running in Headless==== ");
+			Log.info("====Running in Headless ==== ");
 			eo.addArguments("--headless");
 		}
 		if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
-			System.out.println("====Running in Private mode==== ");
+//			System.out.println("====Running in Private mode==== ");
+			Log.info("====Running in incognito mode==== ");
 			eo.addArguments("--inprivate");
 		}
 		

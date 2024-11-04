@@ -19,6 +19,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.qa.opencart.exceptions.BrowserException;
 import com.qa.opencart.exceptions.FrameWorkException;
+import com.qa.opencart.logger.Log;
 
 import io.qameta.allure.Step;
 
@@ -42,7 +43,8 @@ public class DriverFactory {
 	@Step("Initializing the browser with properties :{0}")
 	public WebDriver init_driver(Properties prop) {
 		String browserName = prop.getProperty("browser");
-		System.out.println("Browser name is : " + browserName);
+//		System.out.println("Browser name is : " + browserName);
+		Log.info(prop.getProperty("testname") + " and browser name is : " +  browserName);
 
 		isHighlight = prop.getProperty("highlight");
 		optionsManager = new OptionsManager(prop);
@@ -74,7 +76,8 @@ public class DriverFactory {
 			break;
 			
 			default:
-			System.out.println("Please enter valid browser name : " + browserName);
+//			System.out.println("Please enter valid browser name : " + browserName);
+			Log.error("Please enter valid browser name : " + browserName);
 			throw new BrowserException("=======INVALID BROWSER NAME=======");
 		}
 
@@ -86,7 +89,8 @@ public class DriverFactory {
 
 	
 	private void init_remoteDriver(String browserName) {
-		System.out.println("Running on the tests on Selenium grid with browser : " + browserName);
+//		System.out.println("Running on the tests on Selenium grid with browser : " + browserName);
+		Log.info("Running on the tests on Selenium grid with browser : " + browserName);
 		
 		try {
 		switch (browserName.toLowerCase().trim()) {
@@ -100,7 +104,8 @@ public class DriverFactory {
 			tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.getEdgeOptions()));
 			break;
 		default:
-			System.out.println("Please get the right browser name : " + browserName);
+//			System.out.println("Please get the right browser name : " + browserName);
+			Log.error("Please pass the right browser name : " + browserName);
 			throw new BrowserException("=====INVALID BROWSER NAME=================");
 		}
 	
@@ -131,12 +136,14 @@ public class DriverFactory {
 		FileInputStream ip = null;
 
 		String envName = System.getProperty("env");
-		System.out.println("Running on the test environment : " + envName);
+//		System.out.println("Running on the test environment : " + envName);
+		Log.info("Running on the test environment : " + envName);
 
 		try {
 
 			if (envName == null) {
-				System.out.println("Env is null..So running of the QA env");
+//				System.out.println("Env is null..So running of the QA env");
+				Log.warn("Env is null..So running tests on the QA env");
 				ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
 			} else {
 				switch (envName.toLowerCase().trim()) {
@@ -157,7 +164,8 @@ public class DriverFactory {
 					break;
 
 				default:
-					System.out.println("Please enter right environment name ==> " + envName);
+//					System.out.println("Please enter right environment name ==> " + envName);
+					Log.error("Please enter right environment name ==> " + envName);
 					throw new FrameWorkException("===== INVALID ENVIRONMENT NAME ========");
 				}
 			}

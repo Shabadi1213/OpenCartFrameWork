@@ -38,7 +38,7 @@
     
     <test name="ResultsPage Test">
     	<parameter name="browser" value="firefox" />
-    	<parameter name="browserversion" value="124.0" />
+    	<parameter name="browserversion" value="125.0" />
     	 <parameter name="testname" value="ResultsPage Test" />
 		<classes>
 			<class name="com.qa.opencart.tests.ResultsPageTest" />
