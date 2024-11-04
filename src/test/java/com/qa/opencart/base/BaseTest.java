@@ -33,7 +33,7 @@ public class BaseTest{
 	@Step("Setup the browser :{0} and initalize the properties")
 	@Parameters({"browser","browserversion","testname"})
 	@BeforeTest
-	public void setup(@Optional String browserName,@Optional String browserversion,@Optional String testname) {
+	public void setup(@Optional ("chrome") String browserName,@Optional String browserversion,@Optional String testname) {
 		df = new DriverFactory();
 		prop = df.init_Prop();
 		

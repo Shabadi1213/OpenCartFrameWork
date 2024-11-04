@@ -7,9 +7,14 @@
 		<listener
 			class-name="com.qa.opencart.listeners.ExtentReportListener" />
 	</listeners>
+	
+	
 
 
 	<test name="Login Test">
+		<parameter name="browser" value="chrome" />
+	    <parameter name="browserversion" value="126.0" />
+	    <parameter name="testname" value="Login Test" />
 	
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
