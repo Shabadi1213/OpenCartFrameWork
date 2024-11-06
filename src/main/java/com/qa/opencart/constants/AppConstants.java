@@ -14,7 +14,7 @@ public class AppConstants {
 	public static final String PRODUCT = "MacBook Pro";
 	public static final String SEARCH_RESULTS_HEADER = "Products meeting the search criteria";
 	public static final int ACCOUNTS_PAGE_HEADER_COUNT = 3;
-	public static final String EXPECTED_REGISTER_PAGE_HEADER = "Register Account11";
+	public static final String EXPECTED_REGISTER_PAGE_HEADER = "Register Account";
 	public static final String ACCOUNT_CREATED_SUCCESS_HEADER = "Your Account Has Been Created!";
 	public static final int MACBOOK_SEARCH_COUNT = 3;
 	public static final int IMAC_SEARCH_COUNT = 1;
