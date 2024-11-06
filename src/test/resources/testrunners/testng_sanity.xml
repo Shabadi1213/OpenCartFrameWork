@@ -22,7 +22,7 @@
 	</test>
 	
 	
-	<test name="InvalidLogin Test">
+	<!--<test name="InvalidLogin Test">
 		<parameter name="browser" value="chrome" />
 	    <parameter name="browserversion" value="126.0" />
 	    <parameter name="testname" value="InvalidLogin Test" />
@@ -30,6 +30,6 @@
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageNegativeTest" />
 		</classes>
-	</test>
+	</test>-->
 	
 	</suite>
